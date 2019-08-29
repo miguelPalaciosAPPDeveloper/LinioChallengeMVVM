@@ -1,2 +1,2 @@
 # LinioChallengeMVVM
-Lino challenge using MVVM
+Linio challenge using MVVM
