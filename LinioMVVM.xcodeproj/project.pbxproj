@@ -28,6 +28,10 @@
 		9CED965B231AB26B008BF69A /* LinioChallengeFavoritesRH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED965A231AB26B008BF69A /* LinioChallengeFavoritesRH.swift */; };
 		9CED965D231AB287008BF69A /* LinioChallengeImageProductRH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED965C231AB287008BF69A /* LinioChallengeImageProductRH.swift */; };
 		9CED9664231ACA00008BF69A /* HomeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9663231ACA00008BF69A /* HomeConstants.swift */; };
+		9CED966B231AD55F008BF69A /* InstantiableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED966A231AD55F008BF69A /* InstantiableViewController.swift */; };
+		9CED966E231AD80C008BF69A /* UICollectionReusableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED966D231AD80C008BF69A /* UICollectionReusableViewExtension.swift */; };
+		9CED9671231AD8EB008BF69A /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9670231AD8EB008BF69A /* FavoritesViewController.swift */; };
+		9CED9673231AD8F6008BF69A /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CED9672231AD8F6008BF69A /* Favorites.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		9CED965A231AB26B008BF69A /* LinioChallengeFavoritesRH.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinioChallengeFavoritesRH.swift; sourceTree = "<group>"; };
 		9CED965C231AB287008BF69A /* LinioChallengeImageProductRH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioChallengeImageProductRH.swift; sourceTree = "<group>"; };
 		9CED9663231ACA00008BF69A /* HomeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstants.swift; sourceTree = "<group>"; };
+		9CED966A231AD55F008BF69A /* InstantiableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantiableViewController.swift; sourceTree = "<group>"; };
+		9CED966D231AD80C008BF69A /* UICollectionReusableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionReusableViewExtension.swift; sourceTree = "<group>"; };
+		9CED9670231AD8EB008BF69A /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		9CED9672231AD8F6008BF69A /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,8 @@
 		9CED962E2319F540008BF69A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9CED9666231AD49D008BF69A /* Common */,
+				9CED9665231AD3BF008BF69A /* Favorites */,
 				9CED962F2319F54A008BF69A /* Home */,
 				9CED962C2319F4C2008BF69A /* LaunchScreen */,
 			);
@@ -301,6 +311,48 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		9CED9665231AD3BF008BF69A /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				9CED966F231AD8CD008BF69A /* View */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		9CED9666231AD49D008BF69A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9CED966C231AD56C008BF69A /* Extensions */,
+				9CED9669231AD519008BF69A /* Protocols */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9CED9669231AD519008BF69A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9CED966A231AD55F008BF69A /* InstantiableViewController.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9CED966C231AD56C008BF69A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9CED966D231AD80C008BF69A /* UICollectionReusableViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9CED966F231AD8CD008BF69A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9CED9670231AD8EB008BF69A /* FavoritesViewController.swift */,
+				9CED9672231AD8F6008BF69A /* Favorites.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -384,6 +436,7 @@
 			files = (
 				9C7D1173231767B6005BE7A3 /* LaunchScreen.storyboard in Resources */,
 				9C7D1170231767B6005BE7A3 /* Assets.xcassets in Resources */,
+				9CED9673231AD8F6008BF69A /* Favorites.storyboard in Resources */,
 				9C7D116E231767B4005BE7A3 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,18 +459,21 @@
 				9CED9647231A3751008BF69A /* ServicesErrorValidator.swift in Sources */,
 				9CED9643231A2BE0008BF69A /* ServicesManager.swift in Sources */,
 				9CED964F231A55EB008BF69A /* LinioChallengeServiceManager.swift in Sources */,
+				9CED966E231AD80C008BF69A /* UICollectionReusableViewExtension.swift in Sources */,
 				9CED9657231A5707008BF69A /* LinioChallengeFavorites.swift in Sources */,
 				9CED964D231A52F4008BF69A /* LinioChallengeEndPoint.swift in Sources */,
 				9CED9645231A318C008BF69A /* ServicesResponseHandler.swift in Sources */,
 				9CED96382319FA9D008BF69A /* HTTPEnums.swift in Sources */,
 				9C7D116B231767B4005BE7A3 /* HomeViewController.swift in Sources */,
 				9C7D1169231767B4005BE7A3 /* AppDelegate.swift in Sources */,
+				9CED966B231AD55F008BF69A /* InstantiableViewController.swift in Sources */,
 				9CED965B231AB26B008BF69A /* LinioChallengeFavoritesRH.swift in Sources */,
 				9CED963A2319FDA5008BF69A /* ParameterEncoder.swift in Sources */,
 				9CED9641231A0608008BF69A /* ServicesRouter.swift in Sources */,
 				9CED963C231A0085008BF69A /* URLParameterEncoding.swift in Sources */,
 				9CED963F231A041C008BF69A /* ServicesConstants.swift in Sources */,
 				9CED965D231AB287008BF69A /* LinioChallengeImageProductRH.swift in Sources */,
+				9CED9671231AD8EB008BF69A /* FavoritesViewController.swift in Sources */,
 				9CED96362319F998008BF69A /* EndPointType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

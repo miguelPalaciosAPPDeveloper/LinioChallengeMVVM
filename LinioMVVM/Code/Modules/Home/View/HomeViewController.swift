@@ -14,7 +14,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var linioLogoViewCenteConstraint: NSLayoutConstraint!
     @IBOutlet weak var enterButton: UIButton!
 
+    // MARK: - Properties.
     private typealias constants = HomeConstants
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +25,26 @@ class HomeViewController: UIViewController {
     }
 
     // MARK: - Private functions.
+
+    /**
+     Setup enterButton.
+     - Add shadow and cornerRadius.
+     **/
     fileprivate func setupButton() {
         enterButton.alpha = 0.0
         enterButton.layer.shadowRadius = constants.radius
         enterButton.layer.cornerRadius = constants.radius
         enterButton.layer.shadowOpacity = constants.shadowOpacity
-        enterButton.layer.shadowColor = constants.shadowColor.cgColor
+        enterButton.layer.shadowColor = UIColor.lightGray.cgColor
         enterButton.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-        enterButton.layer.masksToBounds = true
+        enterButton.layer.masksToBounds = false
     }
 
+    /**
+     Show an animation.
+     - Linio logo animation.
+     - EnterButton animation.
+     **/
     fileprivate func animateView() {
         let screenHeight = UIScreen.main.bounds.height
         self.linioLogoViewCenteConstraint.constant = constants.defaultValue - (screenHeight / 2)
