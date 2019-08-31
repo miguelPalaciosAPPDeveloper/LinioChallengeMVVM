@@ -1,0 +1,13 @@
+/* 
+  LinioChallengeLocalizables.strings
+  LinioMVVM
+
+  Created by Miguel De León Palacios on 8/31/19.
+  Copyright © 2019 MiguelPalacios. All rights reserved.
+*/
+
+// MARK: - Home
+"home_button_title" = "Entrar";
+
+// MARK: - Favorites
+"favorites_navigation_title" = "Favoritos";

@@ -15,13 +15,19 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var enterButton: UIButton!
 
     // MARK: - Properties.
-    private typealias constants = HomeConstants
+    private typealias constants = LinioConstants
+    private let localizables = LinioLocalizables()
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButton()
         animateView()
+    }
+
+    @IBAction func enterAction(_ sender: UIButton) {
+        let navigationController = UINavigationController(rootViewController: FavoritesViewController.createInstance())
+        self.present(navigationController, animated: true, completion: nil)
     }
 
     // MARK: - Private functions.
@@ -37,6 +43,7 @@ class HomeViewController: UIViewController {
         enterButton.layer.shadowOpacity = constants.shadowOpacity
         enterButton.layer.shadowColor = UIColor.lightGray.cgColor
         enterButton.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        enterButton.setTitle(localizables.homeButtonTitle, for: .normal)
         enterButton.layer.masksToBounds = false
     }
 

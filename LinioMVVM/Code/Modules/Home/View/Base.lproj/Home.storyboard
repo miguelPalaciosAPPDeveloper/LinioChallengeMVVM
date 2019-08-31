@@ -52,6 +52,9 @@
                                 <state key="normal" title="ENTRAR">
                                     <color key="titleColor" red="0.9977164865" green="0.46263921260000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="enterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bhw-Mp-ecR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99771648645401001" green="0.4626392126083374" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

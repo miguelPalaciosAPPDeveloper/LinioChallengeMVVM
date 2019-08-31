@@ -27,11 +27,16 @@
 		9CED9657231A5707008BF69A /* LinioChallengeFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9656231A5707008BF69A /* LinioChallengeFavorites.swift */; };
 		9CED965B231AB26B008BF69A /* LinioChallengeFavoritesRH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED965A231AB26B008BF69A /* LinioChallengeFavoritesRH.swift */; };
 		9CED965D231AB287008BF69A /* LinioChallengeImageProductRH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED965C231AB287008BF69A /* LinioChallengeImageProductRH.swift */; };
-		9CED9664231ACA00008BF69A /* HomeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9663231ACA00008BF69A /* HomeConstants.swift */; };
+		9CED9664231ACA00008BF69A /* LinioConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9663231ACA00008BF69A /* LinioConstants.swift */; };
 		9CED966B231AD55F008BF69A /* InstantiableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED966A231AD55F008BF69A /* InstantiableViewController.swift */; };
 		9CED966E231AD80C008BF69A /* UICollectionReusableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED966D231AD80C008BF69A /* UICollectionReusableViewExtension.swift */; };
 		9CED9671231AD8EB008BF69A /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9670231AD8EB008BF69A /* FavoritesViewController.swift */; };
 		9CED9673231AD8F6008BF69A /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CED9672231AD8F6008BF69A /* Favorites.storyboard */; };
+		9CED9675231ADB46008BF69A /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9674231ADB46008BF69A /* UINavigationControllerExtension.swift */; };
+		9CED967A231ADE1D008BF69A /* LinioIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9679231ADE1D008BF69A /* LinioIcons.swift */; };
+		9CED967D231AE8C3008BF69A /* LinioChallengeLocalizables.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CED967C231AE8C3008BF69A /* LinioChallengeLocalizables.strings */; };
+		9CED967F231AE8F0008BF69A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED967E231AE8F0008BF69A /* StringExtension.swift */; };
+		9CED9682231AE9DC008BF69A /* LinioLocalizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9681231AE9DC008BF69A /* LinioLocalizables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,11 +74,16 @@
 		9CED9656231A5707008BF69A /* LinioChallengeFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioChallengeFavorites.swift; sourceTree = "<group>"; };
 		9CED965A231AB26B008BF69A /* LinioChallengeFavoritesRH.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinioChallengeFavoritesRH.swift; sourceTree = "<group>"; };
 		9CED965C231AB287008BF69A /* LinioChallengeImageProductRH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioChallengeImageProductRH.swift; sourceTree = "<group>"; };
-		9CED9663231ACA00008BF69A /* HomeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstants.swift; sourceTree = "<group>"; };
+		9CED9663231ACA00008BF69A /* LinioConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioConstants.swift; sourceTree = "<group>"; };
 		9CED966A231AD55F008BF69A /* InstantiableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantiableViewController.swift; sourceTree = "<group>"; };
 		9CED966D231AD80C008BF69A /* UICollectionReusableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionReusableViewExtension.swift; sourceTree = "<group>"; };
 		9CED9670231AD8EB008BF69A /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		9CED9672231AD8F6008BF69A /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		9CED9674231ADB46008BF69A /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		9CED9679231ADE1D008BF69A /* LinioIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioIcons.swift; sourceTree = "<group>"; };
+		9CED967C231AE8C3008BF69A /* LinioChallengeLocalizables.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LinioChallengeLocalizables.strings; sourceTree = "<group>"; };
+		9CED967E231AE8F0008BF69A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		9CED9681231AE9DC008BF69A /* LinioLocalizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioLocalizables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +181,6 @@
 		9CED962F2319F54A008BF69A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9CED9662231AC9CE008BF69A /* Constants */,
 				9CED965F231AC9B2008BF69A /* View */,
 			);
 			path = Home;
@@ -306,7 +315,7 @@
 		9CED9662231AC9CE008BF69A /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				9CED9663231ACA00008BF69A /* HomeConstants.swift */,
+				9CED9663231ACA00008BF69A /* LinioConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -322,6 +331,10 @@
 		9CED9666231AD49D008BF69A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9CED9680231AE9C9008BF69A /* Localizables */,
+				9CED9662231AC9CE008BF69A /* Constants */,
+				9CED967B231AE8A1008BF69A /* Strings */,
+				9CED9678231ADE10008BF69A /* Models */,
 				9CED966C231AD56C008BF69A /* Extensions */,
 				9CED9669231AD519008BF69A /* Protocols */,
 			);
@@ -340,6 +353,8 @@
 			isa = PBXGroup;
 			children = (
 				9CED966D231AD80C008BF69A /* UICollectionReusableViewExtension.swift */,
+				9CED9674231ADB46008BF69A /* UINavigationControllerExtension.swift */,
+				9CED967E231AE8F0008BF69A /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +366,30 @@
 				9CED9672231AD8F6008BF69A /* Favorites.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9CED9678231ADE10008BF69A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9CED9679231ADE1D008BF69A /* LinioIcons.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CED967B231AE8A1008BF69A /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				9CED967C231AE8C3008BF69A /* LinioChallengeLocalizables.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		9CED9680231AE9C9008BF69A /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				9CED9681231AE9DC008BF69A /* LinioLocalizables.swift */,
+			);
+			path = Localizables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +473,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CED967D231AE8C3008BF69A /* LinioChallengeLocalizables.strings in Resources */,
 				9C7D1173231767B6005BE7A3 /* LaunchScreen.storyboard in Resources */,
 				9C7D1170231767B6005BE7A3 /* Assets.xcassets in Resources */,
 				9CED9673231AD8F6008BF69A /* Favorites.storyboard in Resources */,
@@ -455,23 +495,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CED9664231ACA00008BF69A /* HomeConstants.swift in Sources */,
+				9CED9664231ACA00008BF69A /* LinioConstants.swift in Sources */,
 				9CED9647231A3751008BF69A /* ServicesErrorValidator.swift in Sources */,
 				9CED9643231A2BE0008BF69A /* ServicesManager.swift in Sources */,
 				9CED964F231A55EB008BF69A /* LinioChallengeServiceManager.swift in Sources */,
 				9CED966E231AD80C008BF69A /* UICollectionReusableViewExtension.swift in Sources */,
+				9CED967A231ADE1D008BF69A /* LinioIcons.swift in Sources */,
 				9CED9657231A5707008BF69A /* LinioChallengeFavorites.swift in Sources */,
 				9CED964D231A52F4008BF69A /* LinioChallengeEndPoint.swift in Sources */,
 				9CED9645231A318C008BF69A /* ServicesResponseHandler.swift in Sources */,
 				9CED96382319FA9D008BF69A /* HTTPEnums.swift in Sources */,
+				9CED9682231AE9DC008BF69A /* LinioLocalizables.swift in Sources */,
 				9C7D116B231767B4005BE7A3 /* HomeViewController.swift in Sources */,
 				9C7D1169231767B4005BE7A3 /* AppDelegate.swift in Sources */,
 				9CED966B231AD55F008BF69A /* InstantiableViewController.swift in Sources */,
 				9CED965B231AB26B008BF69A /* LinioChallengeFavoritesRH.swift in Sources */,
 				9CED963A2319FDA5008BF69A /* ParameterEncoder.swift in Sources */,
+				9CED9675231ADB46008BF69A /* UINavigationControllerExtension.swift in Sources */,
 				9CED9641231A0608008BF69A /* ServicesRouter.swift in Sources */,
 				9CED963C231A0085008BF69A /* URLParameterEncoding.swift in Sources */,
 				9CED963F231A041C008BF69A /* ServicesConstants.swift in Sources */,
+				9CED967F231AE8F0008BF69A /* StringExtension.swift in Sources */,
 				9CED965D231AB287008BF69A /* LinioChallengeImageProductRH.swift in Sources */,
 				9CED9671231AD8EB008BF69A /* FavoritesViewController.swift in Sources */,
 				9CED96362319F998008BF69A /* EndPointType.swift in Sources */,
@@ -636,15 +680,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LinioMVVM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.miguel.palacios.challenge.LinioMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -654,15 +700,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LinioMVVM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.miguel.palacios.challenge.LinioMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,5 +1,5 @@
 //
-//  HomeConstants.swift
+//  LinioConstants.swift
 //  LinioMVVM
 //
 //  Created by Miguel De León Palacios on 8/31/19.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum HomeConstants {
+enum LinioConstants {
     // MARK: - Constraints constants.
     static let defaultValue: CGFloat = 108
     static let highPriority: UILayoutPriority = UILayoutPriority(rawValue: 100)

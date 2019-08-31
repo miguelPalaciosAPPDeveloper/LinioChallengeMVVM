@@ -8,9 +8,18 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController {
+class FavoritesViewController: UIViewController, InstantiableViewController {
+    // MARK: - Properties
+    static var storyboardFileName: String = "Favorites"
+    private let localizables = LinioLocalizables()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setup(title: localizables.favoritesNavigationTitle, leftIcon: .addProduct, leftSelector: #selector(addProduct), target: self)
+    }
+
+    // MARK: - Private functions.
+    @objc fileprivate func addProduct() {
+        // TODO: Add logic.
     }
 }
