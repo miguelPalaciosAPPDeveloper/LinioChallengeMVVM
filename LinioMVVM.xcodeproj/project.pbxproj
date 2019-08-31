@@ -23,6 +23,10 @@
 		9CED9645231A318C008BF69A /* ServicesResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9644231A318C008BF69A /* ServicesResponseHandler.swift */; };
 		9CED9647231A3751008BF69A /* ServicesErrorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9646231A3751008BF69A /* ServicesErrorValidator.swift */; };
 		9CED964D231A52F4008BF69A /* LinioChallengeEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED964C231A52F4008BF69A /* LinioChallengeEndPoint.swift */; };
+		9CED964F231A55EB008BF69A /* LinioChallengeServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED964E231A55EB008BF69A /* LinioChallengeServiceManager.swift */; };
+		9CED9657231A5707008BF69A /* LinioChallengeFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9656231A5707008BF69A /* LinioChallengeFavorites.swift */; };
+		9CED965B231AB26B008BF69A /* LinioChallengeFavoritesRH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED965A231AB26B008BF69A /* LinioChallengeFavoritesRH.swift */; };
+		9CED965D231AB287008BF69A /* LinioChallengeImageProductRH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED965C231AB287008BF69A /* LinioChallengeImageProductRH.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		9CED9644231A318C008BF69A /* ServicesResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesResponseHandler.swift; sourceTree = "<group>"; };
 		9CED9646231A3751008BF69A /* ServicesErrorValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesErrorValidator.swift; sourceTree = "<group>"; };
 		9CED964C231A52F4008BF69A /* LinioChallengeEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioChallengeEndPoint.swift; sourceTree = "<group>"; };
+		9CED964E231A55EB008BF69A /* LinioChallengeServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioChallengeServiceManager.swift; sourceTree = "<group>"; };
+		9CED9656231A5707008BF69A /* LinioChallengeFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioChallengeFavorites.swift; sourceTree = "<group>"; };
+		9CED965A231AB26B008BF69A /* LinioChallengeFavoritesRH.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinioChallengeFavoritesRH.swift; sourceTree = "<group>"; };
+		9CED965C231AB287008BF69A /* LinioChallengeImageProductRH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioChallengeImageProductRH.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,9 +241,45 @@
 		9CED964B231A4900008BF69A /* LinioChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				9CED964C231A52F4008BF69A /* LinioChallengeEndPoint.swift */,
+				9CED9650231A566C008BF69A /* EndPoint */,
+				9CED9653231A56BE008BF69A /* Handler */,
+				9CED9651231A5675008BF69A /* Manager */,
+				9CED9652231A567B008BF69A /* Models */,
 			);
 			path = LinioChallenge;
+			sourceTree = "<group>";
+		};
+		9CED9650231A566C008BF69A /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				9CED964C231A52F4008BF69A /* LinioChallengeEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		9CED9651231A5675008BF69A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9CED964E231A55EB008BF69A /* LinioChallengeServiceManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		9CED9652231A567B008BF69A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9CED9656231A5707008BF69A /* LinioChallengeFavorites.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CED9653231A56BE008BF69A /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				9CED965A231AB26B008BF69A /* LinioChallengeFavoritesRH.swift */,
+				9CED965C231AB287008BF69A /* LinioChallengeImageProductRH.swift */,
+			);
+			path = Handler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,15 +385,19 @@
 			files = (
 				9CED9647231A3751008BF69A /* ServicesErrorValidator.swift in Sources */,
 				9CED9643231A2BE0008BF69A /* ServicesManager.swift in Sources */,
+				9CED964F231A55EB008BF69A /* LinioChallengeServiceManager.swift in Sources */,
+				9CED9657231A5707008BF69A /* LinioChallengeFavorites.swift in Sources */,
 				9CED964D231A52F4008BF69A /* LinioChallengeEndPoint.swift in Sources */,
 				9CED9645231A318C008BF69A /* ServicesResponseHandler.swift in Sources */,
 				9CED96382319FA9D008BF69A /* HTTPEnums.swift in Sources */,
 				9C7D116B231767B4005BE7A3 /* HomeViewController.swift in Sources */,
 				9C7D1169231767B4005BE7A3 /* AppDelegate.swift in Sources */,
+				9CED965B231AB26B008BF69A /* LinioChallengeFavoritesRH.swift in Sources */,
 				9CED963A2319FDA5008BF69A /* ParameterEncoder.swift in Sources */,
 				9CED9641231A0608008BF69A /* ServicesRouter.swift in Sources */,
 				9CED963C231A0085008BF69A /* URLParameterEncoding.swift in Sources */,
 				9CED963F231A041C008BF69A /* ServicesConstants.swift in Sources */,
+				9CED965D231AB287008BF69A /* LinioChallengeImageProductRH.swift in Sources */,
 				9CED96362319F998008BF69A /* EndPointType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

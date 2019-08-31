@@ -30,6 +30,6 @@ enum HTTPMethod: String {
  Task type for this challenge.
  **/
 enum HTTPTask {
-    case request(urlParameters: String)
-    case downloadImage(urlParameters: String)
+    case request(path: String)
+    case downloadImage(path: String)
 }

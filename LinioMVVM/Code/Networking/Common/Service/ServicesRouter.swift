@@ -44,13 +44,13 @@ class Router<EndPoint: EndPointType> {
     }
 
     fileprivate func createRequest(from route: EndPoint) throws -> URLRequest {
-        var request = URLRequest(url: route.baseURL.appendingPathComponent(route.path),
+        var request = URLRequest(url: route.baseURL,
                                  cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
                                  timeoutInterval: 10.0)
         switch route.task {
-        case .request(let urlParameters), .downloadImage(let urlParameters):
+        case .request(let path), .downloadImage(let path):
             do {
-                try URLParameterEncoding.encode(urlRequest: &request, with: urlParameters)
+                try URLParameterEncoding.encode(urlRequest: &request, with: path)
             } catch {
                 throw error
             }

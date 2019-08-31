@@ -37,9 +37,36 @@ enum ServicesResponseError: Error {
     case missingURL
     case notNetworkConnection
     case timeout
-    case jsonMapping(String)
     case authenticationError
     case badRequest
+    case badResponse(String)
     case serverError
     case native(Swift.Error?)
+
+    var errorMessage: String {
+        switch self {
+        case .parameters:
+            return ServicesConstants.parameters
+        case .encodingFailed:
+            return ServicesConstants.encodingFailed
+        case .fileNotFound:
+            return ServicesConstants.fileNotFound
+        case .missingURL:
+            return ServicesConstants.missingURL
+        case .notNetworkConnection:
+            return ServicesConstants.notNetworkConnection
+        case .timeout:
+            return ServicesConstants.timeout
+        case .authenticationError:
+            return ServicesConstants.authentication
+        case .badRequest:
+            return ServicesConstants.badRequest
+        case .badResponse(let message):
+            return message
+        case .serverError:
+            return ServicesConstants.genericError
+        case .native(let error):
+            return String(describing: error?.localizedDescription)
+        }
+    }
 }
