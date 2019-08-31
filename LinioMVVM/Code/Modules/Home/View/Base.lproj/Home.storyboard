@@ -58,9 +58,8 @@
                         <constraints>
                             <constraint firstItem="YHS-Tx-XvI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="EMn-4m-6vN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YHS-Tx-XvI" secondAttribute="trailing" constant="64" id="IX3-Id-Jrw"/>
-                            <constraint firstItem="SaK-fD-EhC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" priority="100" id="Jdt-0u-Vhs"/>
+                            <constraint firstItem="SaK-fD-EhC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Jdt-0u-Vhs"/>
                             <constraint firstItem="YHS-Tx-XvI" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="SJR-MR-Hh1"/>
-                            <constraint firstItem="SaK-fD-EhC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="50" constant="40" id="W6k-o3-M6h"/>
                             <constraint firstItem="SaK-fD-EhC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dP7-O7-fFG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -68,7 +67,6 @@
                     <connections>
                         <outlet property="enterButton" destination="YHS-Tx-XvI" id="Qwq-eq-cXy"/>
                         <outlet property="linioLogoViewCenteConstraint" destination="Jdt-0u-Vhs" id="mTT-QN-VO3"/>
-                        <outlet property="linioLogoViewTopConstraint" destination="W6k-o3-M6h" id="VXW-Ke-jOt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -27,6 +27,7 @@
 		9CED9657231A5707008BF69A /* LinioChallengeFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9656231A5707008BF69A /* LinioChallengeFavorites.swift */; };
 		9CED965B231AB26B008BF69A /* LinioChallengeFavoritesRH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED965A231AB26B008BF69A /* LinioChallengeFavoritesRH.swift */; };
 		9CED965D231AB287008BF69A /* LinioChallengeImageProductRH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED965C231AB287008BF69A /* LinioChallengeImageProductRH.swift */; };
+		9CED9664231ACA00008BF69A /* HomeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9663231ACA00008BF69A /* HomeConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		9CED9656231A5707008BF69A /* LinioChallengeFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioChallengeFavorites.swift; sourceTree = "<group>"; };
 		9CED965A231AB26B008BF69A /* LinioChallengeFavoritesRH.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinioChallengeFavoritesRH.swift; sourceTree = "<group>"; };
 		9CED965C231AB287008BF69A /* LinioChallengeImageProductRH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioChallengeImageProductRH.swift; sourceTree = "<group>"; };
+		9CED9663231ACA00008BF69A /* HomeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +161,8 @@
 		9CED962F2319F54A008BF69A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9C7D116A231767B4005BE7A3 /* HomeViewController.swift */,
-				9C7D116C231767B4005BE7A3 /* Home.storyboard */,
+				9CED9662231AC9CE008BF69A /* Constants */,
+				9CED965F231AC9B2008BF69A /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -282,6 +284,23 @@
 			path = Handler;
 			sourceTree = "<group>";
 		};
+		9CED965F231AC9B2008BF69A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C7D116A231767B4005BE7A3 /* HomeViewController.swift */,
+				9C7D116C231767B4005BE7A3 /* Home.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9CED9662231AC9CE008BF69A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9CED9663231ACA00008BF69A /* HomeConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -383,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CED9664231ACA00008BF69A /* HomeConstants.swift in Sources */,
 				9CED9647231A3751008BF69A /* ServicesErrorValidator.swift in Sources */,
 				9CED9643231A2BE0008BF69A /* ServicesManager.swift in Sources */,
 				9CED964F231A55EB008BF69A /* LinioChallengeServiceManager.swift in Sources */,
@@ -562,6 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LinioMVVM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -579,6 +600,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LinioMVVM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

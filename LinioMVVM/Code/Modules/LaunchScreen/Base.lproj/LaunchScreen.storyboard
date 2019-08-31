@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +15,39 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYA-lo-YBv">
+                                <rect key="frame" x="50" y="226" width="220" height="136"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linioBanner" translatesAutoresizingMaskIntoConstraints="NO" id="dte-BH-IGR">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="102.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHALLENGE " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INC-n3-z4c">
+                                        <rect key="frame" x="55.5" y="117" width="109" height="19"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="INC-n3-z4c" secondAttribute="bottom" id="5p6-r7-SXO"/>
+                                    <constraint firstItem="dte-BH-IGR" firstAttribute="top" secondItem="MYA-lo-YBv" secondAttribute="top" id="Jat-Ky-DGd"/>
+                                    <constraint firstAttribute="height" constant="136" id="Ppb-7G-UVv"/>
+                                    <constraint firstAttribute="trailing" secondItem="dte-BH-IGR" secondAttribute="trailing" id="Xgv-ru-J0V"/>
+                                    <constraint firstItem="INC-n3-z4c" firstAttribute="centerX" secondItem="MYA-lo-YBv" secondAttribute="centerX" id="a4V-bi-DSp"/>
+                                    <constraint firstAttribute="width" constant="220" id="bfK-7a-S6c"/>
+                                    <constraint firstItem="dte-BH-IGR" firstAttribute="leading" secondItem="MYA-lo-YBv" secondAttribute="leading" id="lzs-cd-sNt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99771648645401001" green="0.4626392126083374" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MYA-lo-YBv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A5t-bV-2bj"/>
+                            <constraint firstItem="MYA-lo-YBv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FNa-lI-TTp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +56,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="linioBanner" width="216" height="102.5"/>
+    </resources>
 </document>
