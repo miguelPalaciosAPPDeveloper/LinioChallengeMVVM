@@ -24,6 +24,8 @@ class ProductViewCell: UICollectionViewCell {
         // Initialization code
     }
 
+    private var viewModel: FavoritesProductCellProtocol? { didSet { unbind(from: oldValue) } }
+
     fileprivate func setupBadges(product: LinioProduct) {
         let isPlus48 = product.linioPlusLevel > 1
         let productState = ProductStateType(rawValue: product.conditionType) ?? .new
@@ -35,14 +37,27 @@ class ProductViewCell: UICollectionViewCell {
         self.airplaneImageView.isHidden = !product.imported
         self.freeShippingImageView.isHidden = !product.freeShipping
     }
+
+    // MARK: - Bind and unbind functions.
+    fileprivate func bind(to viewModel: FavoritesProductCellProtocol) {
+        viewModel.productImage.observe(on: self) { [weak self] (image: UIImage?) in
+            self?.productImageView.image = image
+        }
+    }
+
+    fileprivate func unbind(from item: FavoritesProductCellProtocol?) {
+        item?.productImage.remove(observer: self)
+    }
 }
 
 // MARK: - FavoritesCellProtocol implementation.
 extension ProductViewCell: FavoritesCellProtocol {
     func setup(model: FavoritesCellViewModelProtocol) {
-        if let cellModel = model as? FavoritesProductCellViewModel {
-            self.productImageView.image = cellModel.productImage
-            self.setupBadges(product: cellModel.productModel)
+        if let viewModel = model as? FavoritesProductCellProtocol {
+            self.viewModel = viewModel
+            self.setupBadges(product: viewModel.productModel)
+            self.viewModel?.downloadProductImage()
+            self.bind(to: viewModel)
         }
     }
 }

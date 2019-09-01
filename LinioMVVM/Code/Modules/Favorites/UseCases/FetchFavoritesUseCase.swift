@@ -8,22 +8,22 @@
 
 import Foundation
 
-protocol FetchFavoritesUseCaseIn {
+protocol FetchFavoritesUseCaseProtocol {
     var favoritesRepository: FavoritesRepositoryProtocol { get }
-    var useCaseOut: FetchFavoritesUseCaseOut? { get set }
+    var useCaseOutput: FetchFavoritesUseCaseOutput? { get set }
 
     @discardableResult
     func fetchFavorites(path: String) -> Cancellable?
 }
 
-protocol FetchFavoritesUseCaseOut {
+protocol FetchFavoritesUseCaseOutput {
     func updateFavorites(_ list: [LinioFavoritesList])
     func failure(_ message: String)
 }
 
-class FetchFavoritesUseCase: FetchFavoritesUseCaseIn {
+class FetchFavoritesUseCase: FetchFavoritesUseCaseProtocol {
     let favoritesRepository: FavoritesRepositoryProtocol
-    var useCaseOut: FetchFavoritesUseCaseOut?
+    var useCaseOutput: FetchFavoritesUseCaseOutput?
 
     init(favoritesRepository: FavoritesRepositoryProtocol) {
         self.favoritesRepository = favoritesRepository
@@ -33,9 +33,9 @@ class FetchFavoritesUseCase: FetchFavoritesUseCaseIn {
         return favoritesRepository.fetchFavorites(path: path) { (result) in
             switch result {
             case .success(let response):
-                self.useCaseOut?.updateFavorites(response)
+                self.useCaseOutput?.updateFavorites(response)
             case .failure(let error):
-                self.useCaseOut?.failure(error.errorMessage)
+                self.useCaseOutput?.failure(error.errorMessage)
             }
         }
     }

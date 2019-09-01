@@ -14,12 +14,22 @@ class LinioChallengeDI {
      - Returns: FavoritesViewController.
      **/
     class func createFavoritesModule() -> FavoritesViewController {
+        // Connection.
         let view = FavoritesViewController.createInstance()
         let serviceRouter = Router<LinioChallengeEndPoint>()
+
+        // Repositories.
         let favoritesRepository: FavoritesRepositoryProtocol = FavoritesRepository(serviceRouter: serviceRouter)
-        var fetchFavoritesUseCase: FetchFavoritesUseCaseIn = FetchFavoritesUseCase(favoritesRepository: favoritesRepository)
-        let viewModel: FavoritesViewModelProtocol & FetchFavoritesUseCaseOut = FavoritesViewModel(fetchFavoritesUseCase: fetchFavoritesUseCase)
-        fetchFavoritesUseCase.useCaseOut = viewModel
+        let imageRepository: ProductImageRepositoryProtocol = ProductImageRepository(serviceRouter: serviceRouter)
+        let imageCacheRepository: ProductImageCacheRepositoryProtocol = ProductImageCacheRepository()
+
+        // UseCases
+        var fetchFavoritesUseCase: FetchFavoritesUseCaseProtocol = FetchFavoritesUseCase(favoritesRepository: favoritesRepository)
+        let productImageUseCase: ProductImageUseCaseProtocol = ProductImageUseCase(imageRepository: imageRepository, imageCacheRespository: imageCacheRepository)
+
+        // ViewModel
+        let viewModel: FavoritesViewModelProtocol & FetchFavoritesUseCaseOutput = FavoritesViewModel(fetchFavoritesUseCase: fetchFavoritesUseCase, productImageUseCase: productImageUseCase)
+        fetchFavoritesUseCase.useCaseOutput = viewModel
         view.viewModel = viewModel
         return view
     }

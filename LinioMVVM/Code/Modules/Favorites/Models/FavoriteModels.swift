@@ -30,12 +30,6 @@ struct FavoritesListCellViewModel: FavoritesCellViewModelProtocol {
     let cellType: FavoriteCellType
 }
 
-struct FavoritesProductCellViewModel: FavoritesCellViewModelProtocol {
-    let productImage: UIImage?
-    let productModel: LinioProduct
-    let cellType: FavoriteCellType
-}
-
 // MARK: - Enums.
 enum FavoriteCellType {
     case favoriteList, favoriteProducts
@@ -54,5 +48,3 @@ enum ProductStateType: String, RawRepresentable {
     case new = "new"
     case refurbished = "refurbished"
 }
-
-

@@ -13,26 +13,17 @@ class FavoritesViewModel {
     let items: Observable<[FavoritesSectionModel]> = Observable([FavoritesSectionModel]())
     let route: Observable<FavoritesViewModelRoute> = Observable(.fetchFavorites)
 
-    private let fetchFavoritesUseCase: FetchFavoritesUseCaseIn
+    private let productImageUseCase: ProductImageUseCaseProtocol
+    private let fetchFavoritesUseCase: FetchFavoritesUseCaseProtocol
     private let localizables = LinioLocalizables()
     private typealias constants = LinioConstants
 
     private var favoritesLoadTask: Cancellable? { willSet { favoritesLoadTask?.cancel() } }
 
     // MARK: - Initialazers.
-    init(fetchFavoritesUseCase: FetchFavoritesUseCaseIn) {
+    init(fetchFavoritesUseCase: FetchFavoritesUseCaseProtocol, productImageUseCase: ProductImageUseCaseProtocol) {
         self.fetchFavoritesUseCase = fetchFavoritesUseCase
-    }
-
-    // MARK: - Private functions.
-    fileprivate func createProductsSection(products: [String: LinioProduct]) -> [FavoritesProductCellViewModel] {
-        var productsCells = [FavoritesProductCellViewModel]()
-        for (_, product) in products.enumerated() {
-            productsCells.append(FavoritesProductCellViewModel(productImage: nil,
-                                                               productModel: product.value,
-                                                               cellType: .favoriteProducts))
-        }
-        return productsCells
+        self.productImageUseCase = productImageUseCase
     }
 }
 
@@ -52,7 +43,7 @@ extension FavoritesViewModel: FavoritesViewModelProtocol {
             route.value = .showFavoritesList(list: viewModel.favoriteListModel)
         case let viewModel as FavoritesProductCellViewModel:
             route.value = .showProductDetail(product: viewModel.productModel,
-                                             productImage: viewModel.productImage)
+                                             productImage: viewModel.productImage.value)
         default:
             break
         }
@@ -60,7 +51,7 @@ extension FavoritesViewModel: FavoritesViewModelProtocol {
 }
 
 
-extension FavoritesViewModel: FetchFavoritesUseCaseOut {
+extension FavoritesViewModel: FetchFavoritesUseCaseOutput {
     func updateFavorites(_ list: [LinioFavoritesList]) {
         var sections = [FavoritesSectionModel]()
         let listCells = list.map({ FavoritesListCellViewModel(firtsProducts: [],
@@ -68,9 +59,8 @@ extension FavoritesViewModel: FetchFavoritesUseCaseOut {
                                                               cellType: .favoriteList) })
         let productsCells = list
             .flatMap({ $0.products })
-            .map({ FavoritesProductCellViewModel(productImage: nil,
-                                                 productModel: $1,
-                                                 cellType: .favoriteProducts) })
+            .map({ FavoritesProductCellViewModel(productModel: $1,
+                                                 productImageUseCase: self.productImageUseCase) })
 
         var title: String? = nil
         sections.append(FavoritesSectionModel(title: title,

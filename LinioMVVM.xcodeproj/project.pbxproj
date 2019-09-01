@@ -24,6 +24,10 @@
 		9CE587C8231C1B0000C71735 /* FavoritesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587C7231C1B0000C71735 /* FavoritesRepository.swift */; };
 		9CE587CA231C1F5900C71735 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587C9231C1F5800C71735 /* FavoritesViewModel.swift */; };
 		9CE587CD231C2C0800C71735 /* LinioChallengeDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587CC231C2C0800C71735 /* LinioChallengeDI.swift */; };
+		9CE587CF231C451C00C71735 /* ProductImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587CE231C451C00C71735 /* ProductImageRepository.swift */; };
+		9CE587D1231C4BF100C71735 /* FavoritesProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587D0231C4BF100C71735 /* FavoritesProductCellViewModel.swift */; };
+		9CE587D3231C4CCD00C71735 /* ProductImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587D2231C4CCD00C71735 /* ProductImageUseCase.swift */; };
+		9CE587D5231C4E5800C71735 /* ProductImageCacheRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587D4231C4E5800C71735 /* ProductImageCacheRepository.swift */; };
 		9CED96362319F998008BF69A /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED96352319F998008BF69A /* EndPointType.swift */; };
 		9CED96382319FA9D008BF69A /* HTTPEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED96372319FA9D008BF69A /* HTTPEnums.swift */; };
 		9CED963A2319FDA5008BF69A /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED96392319FDA5008BF69A /* ParameterEncoder.swift */; };
@@ -89,6 +93,10 @@
 		9CE587C7231C1B0000C71735 /* FavoritesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRepository.swift; sourceTree = "<group>"; };
 		9CE587C9231C1F5800C71735 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		9CE587CC231C2C0800C71735 /* LinioChallengeDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioChallengeDI.swift; sourceTree = "<group>"; };
+		9CE587CE231C451C00C71735 /* ProductImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageRepository.swift; sourceTree = "<group>"; };
+		9CE587D0231C4BF100C71735 /* FavoritesProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProductCellViewModel.swift; sourceTree = "<group>"; };
+		9CE587D2231C4CCD00C71735 /* ProductImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageUseCase.swift; sourceTree = "<group>"; };
+		9CE587D4231C4E5800C71735 /* ProductImageCacheRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageCacheRepository.swift; sourceTree = "<group>"; };
 		9CED96352319F998008BF69A /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		9CED96372319FA9D008BF69A /* HTTPEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEnums.swift; sourceTree = "<group>"; };
 		9CED96392319FDA5008BF69A /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
@@ -206,19 +214,21 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		9CE587BD231B660200C71735 /* ViewModel */ = {
+		9CE587BD231B660200C71735 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				9CE587BE231B663C00C71735 /* FavoritesProtocols.swift */,
 				9CE587C9231C1F5800C71735 /* FavoritesViewModel.swift */,
+				9CE587D0231C4BF100C71735 /* FavoritesProductCellViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		9CE587C2231C0E0400C71735 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
 				9CE587C3231C0EBE00C71735 /* FetchFavoritesUseCase.swift */,
+				9CE587D2231C4CCD00C71735 /* ProductImageUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -227,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				9CE587C7231C1B0000C71735 /* FavoritesRepository.swift */,
+				9CE587CE231C451C00C71735 /* ProductImageRepository.swift */,
+				9CE587D4231C4E5800C71735 /* ProductImageCacheRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -425,7 +437,7 @@
 			children = (
 				9CE587C6231C1A0600C71735 /* Repositories */,
 				9CE587C2231C0E0400C71735 /* UseCases */,
-				9CE587BD231B660200C71735 /* ViewModel */,
+				9CE587BD231B660200C71735 /* ViewModels */,
 				9CED9690231B521D008BF69A /* Models */,
 				9CED966F231AD8CD008BF69A /* View */,
 			);
@@ -651,6 +663,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CED968E231B4EB3008BF69A /* FavoriteHeaderReusableView.swift in Sources */,
+				9CE587D3231C4CCD00C71735 /* ProductImageUseCase.swift in Sources */,
+				9CE587D5231C4E5800C71735 /* ProductImageCacheRepository.swift in Sources */,
 				9CED9664231ACA00008BF69A /* LinioConstants.swift in Sources */,
 				9CE587CD231C2C0800C71735 /* LinioChallengeDI.swift in Sources */,
 				9CE587B3231B609400C71735 /* LottieExtension.swift in Sources */,
@@ -665,8 +679,10 @@
 				9CED964D231A52F4008BF69A /* LinioChallengeEndPoint.swift in Sources */,
 				9CE587BF231B663C00C71735 /* FavoritesProtocols.swift in Sources */,
 				9CED9645231A318C008BF69A /* ServicesResponseHandler.swift in Sources */,
+				9CE587CF231C451C00C71735 /* ProductImageRepository.swift in Sources */,
 				9CE587C8231C1B0000C71735 /* FavoritesRepository.swift in Sources */,
 				9CED96382319FA9D008BF69A /* HTTPEnums.swift in Sources */,
+				9CE587D1231C4BF100C71735 /* FavoritesProductCellViewModel.swift in Sources */,
 				9CED9682231AE9DC008BF69A /* LinioLocalizables.swift in Sources */,
 				9C7D116B231767B4005BE7A3 /* HomeViewController.swift in Sources */,
 				9C7D1169231767B4005BE7A3 /* AppDelegate.swift in Sources */,

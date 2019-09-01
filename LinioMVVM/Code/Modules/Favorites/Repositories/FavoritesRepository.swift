@@ -9,6 +9,7 @@
 import Foundation
 
 protocol FavoritesRepositoryProtocol {
+    @discardableResult
     func fetchFavorites(path: String, completion: @escaping ServicesRouterCompletion<[LinioFavoritesList]>) -> Cancellable?
 }
 
