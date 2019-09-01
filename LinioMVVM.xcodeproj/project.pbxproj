@@ -13,6 +13,11 @@
 		9C7D1170231767B6005BE7A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C7D116F231767B6005BE7A3 /* Assets.xcassets */; };
 		9C7D1173231767B6005BE7A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C7D1171231767B6005BE7A3 /* LaunchScreen.storyboard */; };
 		9C7D117E231767B6005BE7A3 /* LinioMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7D117D231767B6005BE7A3 /* LinioMVVMTests.swift */; };
+		9CE587B0231B608500C71735 /* AnimationLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587AE231B608500C71735 /* AnimationLoader.swift */; };
+		9CE587B1231B608500C71735 /* AnimationLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587AF231B608500C71735 /* AnimationLoadable.swift */; };
+		9CE587B3231B609400C71735 /* LottieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587B2231B609300C71735 /* LottieExtension.swift */; };
+		9CE587B6231B618000C71735 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE587B5231B618000C71735 /* Lottie.framework */; };
+		9CE587BC231B627500C71735 /* linioLoader.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CE587BB231B627500C71735 /* linioLoader.json */; };
 		9CED96362319F998008BF69A /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED96352319F998008BF69A /* EndPointType.swift */; };
 		9CED96382319FA9D008BF69A /* HTTPEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED96372319FA9D008BF69A /* HTTPEnums.swift */; };
 		9CED963A2319FDA5008BF69A /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED96392319FDA5008BF69A /* ParameterEncoder.swift */; };
@@ -67,6 +72,11 @@
 		9C7D1179231767B6005BE7A3 /* LinioMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinioMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7D117D231767B6005BE7A3 /* LinioMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioMVVMTests.swift; sourceTree = "<group>"; };
 		9C7D117F231767B6005BE7A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CE587AE231B608500C71735 /* AnimationLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationLoader.swift; sourceTree = "<group>"; };
+		9CE587AF231B608500C71735 /* AnimationLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationLoadable.swift; sourceTree = "<group>"; };
+		9CE587B2231B609300C71735 /* LottieExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieExtension.swift; sourceTree = "<group>"; };
+		9CE587B5231B618000C71735 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
+		9CE587BB231B627500C71735 /* linioLoader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = linioLoader.json; sourceTree = "<group>"; };
 		9CED96352319F998008BF69A /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		9CED96372319FA9D008BF69A /* HTTPEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEnums.swift; sourceTree = "<group>"; };
 		9CED96392319FDA5008BF69A /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
@@ -105,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CE587B6231B618000C71735 /* Lottie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +135,7 @@
 				9C7D1167231767B4005BE7A3 /* LinioMVVM */,
 				9C7D117C231767B6005BE7A3 /* LinioMVVMTests */,
 				9C7D1166231767B4005BE7A3 /* Products */,
+				9CE587B4231B618000C71735 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +167,33 @@
 			path = LinioMVVMTests;
 			sourceTree = "<group>";
 		};
+		9CE587AD231B607000C71735 /* LottieAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				9CE587BA231B626700C71735 /* Resource */,
+				9CE587B2231B609300C71735 /* LottieExtension.swift */,
+				9CE587AF231B608500C71735 /* AnimationLoadable.swift */,
+				9CE587AE231B608500C71735 /* AnimationLoader.swift */,
+			);
+			path = LottieAnimations;
+			sourceTree = "<group>";
+		};
+		9CE587B4231B618000C71735 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CE587B5231B618000C71735 /* Lottie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CE587BA231B626700C71735 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9CE587BB231B627500C71735 /* linioLoader.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		9CED962B2319F490008BF69A /* Code */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +223,7 @@
 		9CED962E2319F540008BF69A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9CE587AD231B607000C71735 /* LottieAnimations */,
 				9CED9666231AD49D008BF69A /* Common */,
 				9CED9665231AD3BF008BF69A /* Favorites */,
 				9CED962F2319F54A008BF69A /* Home */,
@@ -439,6 +479,7 @@
 				9C7D1161231767B4005BE7A3 /* Sources */,
 				9C7D1162231767B4005BE7A3 /* Frameworks */,
 				9C7D1163231767B4005BE7A3 /* Resources */,
+				9CE587B8231B61C300C71735 /* Carthage frameworks */,
 			);
 			buildRules = (
 			);
@@ -517,6 +558,7 @@
 				9CED9673231AD8F6008BF69A /* Favorites.storyboard in Resources */,
 				9CED9687231B34E0008BF69A /* FavoritesListViewCell.xib in Resources */,
 				9CED968F231B4EB3008BF69A /* FavoriteHeaderReusableView.xib in Resources */,
+				9CE587BC231B627500C71735 /* linioLoader.json in Resources */,
 				9C7D116E231767B4005BE7A3 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +572,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9CE587B8231B61C300C71735 /* Carthage frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
+			);
+			name = "Carthage frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9C7D1161231767B4005BE7A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -537,12 +602,14 @@
 			files = (
 				9CED968E231B4EB3008BF69A /* FavoriteHeaderReusableView.swift in Sources */,
 				9CED9664231ACA00008BF69A /* LinioConstants.swift in Sources */,
+				9CE587B3231B609400C71735 /* LottieExtension.swift in Sources */,
 				9CED9647231A3751008BF69A /* ServicesErrorValidator.swift in Sources */,
 				9CED9643231A2BE0008BF69A /* ServicesManager.swift in Sources */,
 				9CED964F231A55EB008BF69A /* LinioChallengeServiceManager.swift in Sources */,
 				9CED966E231AD80C008BF69A /* UICollectionReusableViewExtension.swift in Sources */,
 				9CED967A231ADE1D008BF69A /* LinioIcons.swift in Sources */,
 				9CED9657231A5707008BF69A /* LinioChallengeFavorites.swift in Sources */,
+				9CE587B1231B608500C71735 /* AnimationLoadable.swift in Sources */,
 				9CED964D231A52F4008BF69A /* LinioChallengeEndPoint.swift in Sources */,
 				9CED9645231A318C008BF69A /* ServicesResponseHandler.swift in Sources */,
 				9CED96382319FA9D008BF69A /* HTTPEnums.swift in Sources */,
@@ -563,6 +630,7 @@
 				9CED9686231B34E0008BF69A /* FavoritesListViewCell.swift in Sources */,
 				9CED9671231AD8EB008BF69A /* FavoritesViewController.swift in Sources */,
 				9CED96362319F998008BF69A /* EndPointType.swift in Sources */,
+				9CE587B0231B608500C71735 /* AnimationLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +794,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = LinioMVVM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -746,6 +818,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = LinioMVVM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
