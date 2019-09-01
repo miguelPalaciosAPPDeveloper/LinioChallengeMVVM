@@ -13,13 +13,27 @@ class FavoritesListViewCell: UICollectionViewCell {
     // MARK: - IBOutlets.
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
-    @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var scondaryImageView: UIImageView!
-    @IBOutlet weak var thirdImageView: UIImageView!
+    @IBOutlet var mainProducts: [UIImageView]!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    fileprivate func setupMainProducts(images: [UIImage?]) {
+        for (index, image) in images.enumerated() {
+            mainProducts[index].image = image
+        }
+    }
+}
+
+// MARK: - FavoritesCellProtocol implementation.
+extension FavoritesListViewCell: FavoritesCellProtocol {
+    func setup(model: FavoritesCellModelProtocol) {
+        if let cellModel = model as? FavoritesListCellModel {
+            self.titleLabel.text = cellModel.favoriteListModel.description
+            self.valueLabel.text = "\(cellModel.favoriteListModel.products.count)"
+            setupMainProducts(images: cellModel.firtsProducts)
+        }
+    }
 }

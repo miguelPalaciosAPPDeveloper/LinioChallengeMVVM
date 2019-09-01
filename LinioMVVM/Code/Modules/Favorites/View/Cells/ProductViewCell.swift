@@ -23,4 +23,26 @@ class ProductViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+
+    fileprivate func setupBadges(product: LinioProduct) {
+        let isPlus48 = product.linioPlusLevel > 1
+        let productState = ProductStateType(rawValue: product.conditionType) ?? .new
+        
+        self.plusImageView.isHidden = isPlus48
+        self.plus48ImageView.isHidden = !isPlus48
+        self.refurbishedImageView.isHidden = productState == .new
+        self.newProductImageView.isHidden = productState == .refurbished
+        self.airplaneImageView.isHidden = !product.imported
+        self.freeShippingImageView.isHidden = !product.freeShipping
+    }
+}
+
+// MARK: - FavoritesCellProtocol implementation.
+extension ProductViewCell: FavoritesCellProtocol {
+    func setup(model: FavoritesCellModelProtocol) {
+        if let cellModel = model as? FavoritesProductCellModel {
+            self.productImageView.image = cellModel.productImage
+            self.setupBadges(product: cellModel.productModel)
+        }
+    }
 }

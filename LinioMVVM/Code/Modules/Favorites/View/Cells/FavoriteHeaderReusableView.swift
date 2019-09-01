@@ -9,5 +9,19 @@
 import UIKit
 
 class FavoriteHeaderReusableView: UICollectionReusableView {
-    @IBOutlet weak var titleLbale: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+}
+
+// MARK: - FavoritesCellProtocol implementation.
+extension FavoriteHeaderReusableView: FavoritesCellProtocol {
+    func setup(model: FavoritesCellModelProtocol) {
+        if let cellModel = model as? FavoritesSectionModel {
+            self.titleLabel.text = cellModel.title
+        }
+    }
 }

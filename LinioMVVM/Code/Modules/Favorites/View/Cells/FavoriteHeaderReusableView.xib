@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="FavoriteHeaderReusableView" customModule="LinioMVVM" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -30,6 +30,9 @@
                 <constraint firstAttribute="bottom" secondItem="ofA-AY-Cjn" secondAttribute="bottom" constant="10" id="ePD-0g-iX3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="titleLabel" destination="ofA-AY-Cjn" id="ht7-8o-JAQ"/>
+            </connections>
         </collectionReusableView>
     </objects>
 </document>

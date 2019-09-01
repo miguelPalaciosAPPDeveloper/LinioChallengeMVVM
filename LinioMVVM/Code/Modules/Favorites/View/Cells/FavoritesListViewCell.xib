@@ -123,11 +123,11 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="135" height="120"/>
             <connections>
-                <outlet property="mainImageView" destination="qUX-l8-Wrl" id="M69-mG-2Os"/>
-                <outlet property="scondaryImageView" destination="hnx-jt-of1" id="fCC-tU-7Bg"/>
-                <outlet property="thirdImageView" destination="lOa-94-kuv" id="C0d-UI-pC4"/>
                 <outlet property="titleLabel" destination="xjp-r1-pqU" id="dgd-W7-Tzd"/>
                 <outlet property="valueLabel" destination="F2d-zo-RrH" id="zRa-T0-zd5"/>
+                <outletCollection property="mainProducts" destination="qUX-l8-Wrl" collectionClass="NSMutableArray" id="X0F-Sp-Dyf"/>
+                <outletCollection property="mainProducts" destination="hnx-jt-of1" collectionClass="NSMutableArray" id="57Q-CU-NcJ"/>
+                <outletCollection property="mainProducts" destination="lOa-94-kuv" collectionClass="NSMutableArray" id="Zqy-jU-htJ"/>
             </connections>
             <point key="canvasLocation" x="7.2463768115942031" y="56.919642857142854"/>
         </collectionViewCell>
