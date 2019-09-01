@@ -39,8 +39,8 @@ class ProductViewCell: UICollectionViewCell {
 
 // MARK: - FavoritesCellProtocol implementation.
 extension ProductViewCell: FavoritesCellProtocol {
-    func setup(model: FavoritesCellModelProtocol) {
-        if let cellModel = model as? FavoritesProductCellModel {
+    func setup(model: FavoritesCellViewModelProtocol) {
+        if let cellModel = model as? FavoritesProductCellViewModel {
             self.productImageView.image = cellModel.productImage
             self.setupBadges(product: cellModel.productModel)
         }

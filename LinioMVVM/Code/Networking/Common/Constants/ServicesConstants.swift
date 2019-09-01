@@ -25,4 +25,5 @@ enum ServicesConstants {
     static let timeout = "Timeout"
     static let authentication = "This request needs authentication"
     static let badRequest = "Bad request"
+    static let cancelled = "Request was cancelled"
 }

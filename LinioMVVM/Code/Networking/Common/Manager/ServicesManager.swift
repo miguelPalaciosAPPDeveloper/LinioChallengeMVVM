@@ -13,6 +13,10 @@ protocol ServicesManager {
     var router: Router<EndPoint> { get }
 }
 
+protocol Cancellable {
+    func cancel()
+}
+
 enum ServicesResult<T> {
     case success(T)
     case failure(ServicesResponseError)

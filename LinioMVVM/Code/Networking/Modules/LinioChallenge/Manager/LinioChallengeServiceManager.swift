@@ -10,8 +10,12 @@ import Foundation
 import UIKit
 
 protocol LinioChallengeServiceProtocol: ServicesManager {
-    func getFavoritesList(withPath jsonPath: String, completion: @escaping ServicesRouterCompletion<[LinioFavoritesList]>)
-    func getImageProduct(withPath imagePath: String, completion: @escaping ServicesRouterCompletion<UIImage>)
+    @discardableResult
+    func getFavoritesList(withPath jsonPath: String,
+                          completion: @escaping ServicesRouterCompletion<[LinioFavoritesList]>) -> Cancellable?
+    @discardableResult
+    func getImageProduct(withPath imagePath: String,
+                         completion: @escaping ServicesRouterCompletion<UIImage>) -> Cancellable?
 }
 
 struct LinioChallengeServiceManager: LinioChallengeServiceProtocol {
@@ -19,13 +23,13 @@ struct LinioChallengeServiceManager: LinioChallengeServiceProtocol {
 
     var router: Router<LinioChallengeEndPoint>
 
-    func getFavoritesList(withPath jsonPath: String, completion: @escaping ServicesRouterCompletion<[LinioFavoritesList]>) {
+    func getFavoritesList(withPath jsonPath: String, completion: @escaping ServicesRouterCompletion<[LinioFavoritesList]>) -> Cancellable? {
         let responseHandler = LinioChallengeFavoritesRH(withCompletion: completion)
-        router.request(.favorites(path: jsonPath), responseHandler: responseHandler)
+        return router.request(.favorites(path: jsonPath), responseHandler: responseHandler)
     }
 
-    func getImageProduct(withPath imagePath: String, completion: @escaping ServicesRouterCompletion<UIImage>) {
+    func getImageProduct(withPath imagePath: String, completion: @escaping ServicesRouterCompletion<UIImage>) -> Cancellable? {
         let responseHandler = LinioChallengeImageProductRH(withCompletion: completion)
-        router.request(.productImage(path: imagePath), responseHandler: responseHandler)
+        return router.request(.productImage(path: imagePath), responseHandler: responseHandler)
     }
 }

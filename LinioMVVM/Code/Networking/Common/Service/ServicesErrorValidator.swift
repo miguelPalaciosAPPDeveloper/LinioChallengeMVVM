@@ -20,6 +20,8 @@ struct ServicesErrorValidator {
             return ServicesResponseError.timeout
         case NSURLErrorNotConnectedToInternet:
             return ServicesResponseError.notNetworkConnection
+        case NSURLErrorCancelled:
+            return ServicesResponseError.cancelled
         default:
             return ServicesResponseError.native(error)
         }
@@ -42,6 +44,7 @@ enum ServicesResponseError: Error {
     case badResponse(String)
     case serverError
     case native(Swift.Error?)
+    case cancelled
 
     var errorMessage: String {
         switch self {
@@ -67,6 +70,8 @@ enum ServicesResponseError: Error {
             return ServicesConstants.genericError
         case .native(let error):
             return String(describing: error?.localizedDescription)
+        case .cancelled:
+            return ServicesConstants.cancelled
         }
     }
 }

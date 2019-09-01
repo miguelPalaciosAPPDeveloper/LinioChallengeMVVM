@@ -8,13 +8,18 @@
 
 import Foundation
 
+protocol NetworkRouter: class {
+    associatedtype EndPoint: EndPointType
+    func request<Responser: ServicesResponseHandler>(_ endPoint: EndPoint, responseHandler: Responser) -> Cancellable?
+}
+
 /**
  Router to request with ServicesRouter implementation.
  **/
-class Router<EndPoint: EndPointType> {
+class Router<EndPoint: EndPointType>: NetworkRouter {
     private var task: URLSessionTask?
 
-    func request<Responser>(_ endPoint: EndPoint, responseHandler: Responser) where Responser: ServicesResponseHandler {
+    func request<Responser>(_ endPoint: EndPoint, responseHandler: Responser) -> Cancellable? where Responser: ServicesResponseHandler {
         let session = URLSession.shared
         do {
             let request = try self.createRequest(from: endPoint)
@@ -41,6 +46,7 @@ class Router<EndPoint: EndPointType> {
         }
 
         task?.resume()
+        return task
     }
 
     fileprivate func createRequest(from route: EndPoint) throws -> URLRequest {
@@ -59,3 +65,5 @@ class Router<EndPoint: EndPointType> {
     }
 }
 
+// MARK: - Cancellable implementation.
+extension URLSessionTask: Cancellable {}

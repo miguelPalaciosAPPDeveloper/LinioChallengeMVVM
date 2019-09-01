@@ -19,7 +19,7 @@ class FavoriteHeaderReusableView: UICollectionReusableView {
 
 // MARK: - FavoritesCellProtocol implementation.
 extension FavoriteHeaderReusableView: FavoritesCellProtocol {
-    func setup(model: FavoritesCellModelProtocol) {
+    func setup(model: FavoritesCellViewModelProtocol) {
         if let cellModel = model as? FavoritesSectionModel {
             self.titleLabel.text = cellModel.title
         }

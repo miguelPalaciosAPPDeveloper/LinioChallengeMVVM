@@ -29,8 +29,8 @@ class FavoritesListViewCell: UICollectionViewCell {
 
 // MARK: - FavoritesCellProtocol implementation.
 extension FavoritesListViewCell: FavoritesCellProtocol {
-    func setup(model: FavoritesCellModelProtocol) {
-        if let cellModel = model as? FavoritesListCellModel {
+    func setup(model: FavoritesCellViewModelProtocol) {
+        if let cellModel = model as? FavoritesListCellViewModel {
             self.titleLabel.text = cellModel.favoriteListModel.description
             self.valueLabel.text = "\(cellModel.favoriteListModel.products.count)"
             setupMainProducts(images: cellModel.firtsProducts)

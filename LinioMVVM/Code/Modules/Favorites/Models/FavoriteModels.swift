@@ -10,24 +10,25 @@ import UIKit
 
 // MARK: - Protocols
 protocol FavoritesCellProtocol {
-    func setup(model: FavoritesCellModelProtocol)
+    func setup(model: FavoritesCellViewModelProtocol)
 }
 
-protocol FavoritesCellModelProtocol {}
+protocol FavoritesCellViewModelProtocol {}
 
 // MARK: - Models.
-struct FavoritesSectionModel: FavoritesCellModelProtocol {
+struct FavoritesSectionModel: FavoritesCellViewModelProtocol {
     let title: String?
     let headerSize: CGSize
+    let cells: [FavoritesCellViewModelProtocol]
 }
 
-struct FavoritesListCellModel: FavoritesCellModelProtocol {
+struct FavoritesListCellViewModel: FavoritesCellViewModelProtocol {
     let firtsProducts: [UIImage?]
     let favoriteListModel: LinioFavoritesList
     let cellType: FavoriteCellType
 }
 
-struct FavoritesProductCellModel: FavoritesCellModelProtocol {
+struct FavoritesProductCellViewModel: FavoritesCellViewModelProtocol {
     let productImage: UIImage?
     let productModel: LinioProduct
     let cellType: FavoriteCellType

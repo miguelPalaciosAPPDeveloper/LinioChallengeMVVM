@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController, InstantiableViewController {
+class FavoritesViewController: UIViewController, InstantiableViewController, AnimationLoadable {
 
     // MARK: - IBOutlets.
     @IBOutlet weak var favoritesCollectionView: UICollectionView!
@@ -17,17 +17,31 @@ class FavoritesViewController: UIViewController, InstantiableViewController {
     static var storyboardFileName: String = "Favorites"
     private let localizables = LinioLocalizables()
     private typealias constants = LinioConstants
+    private var items = [FavoritesSectionModel]()
+    var viewModel: FavoritesViewModelProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setup(title: localizables.favoritesNavigationTitle, leftIcon: .addProduct, leftSelector: #selector(addProduct), target: self)
+        self.navigationController?.setup(title: localizables.favoritesNavigationTitle,
+                                         leftIcon: .addProduct,
+                                         leftSelector: #selector(addProduct),
+                                         target: self)
+        self.setupCollectionView()
+        guard let viewModel = self.viewModel else { return }
+        self.bind(to: viewModel)
+        self.startAnimation(animation: LinioAnimations.loader) { [weak self] in
+            self?.viewModel?.fetchFavorites()
+        }
     }
 
     // MARK: - Private functions.
     @objc fileprivate func addProduct() {
-        // TODO: Add logic.
+        viewModel?.didTapAddProduct()
     }
 
+    /**
+     Setup collectionView, assign delegates and register cells.
+     **/
     fileprivate func setupCollectionView() {
         favoritesCollectionView.delegate = self
         favoritesCollectionView.dataSource = self
@@ -41,16 +55,49 @@ class FavoritesViewController: UIViewController, InstantiableViewController {
                                          forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                          withReuseIdentifier: FavoriteHeaderReusableView.identifier)
     }
+
+    /**
+     Add observes to viewModel.
+     **/
+    fileprivate func bind(to viewModel: FavoritesViewModelProtocol) {
+        viewModel.items.observe(on: self) { [weak self] (items) in
+            self?.items = items
+        }
+
+        viewModel.route.observe(on: self) { [weak self] (route) in
+            self?.handler(route)
+        }
+    }
+
+    fileprivate func handler(_ route: FavoritesViewModelRoute) {
+        switch route {
+        case .addProduct:
+            // TODO: Add view.
+            break
+        case .closeLoader:
+            self.stopAnimation { self.favoritesCollectionView.reloadData() }
+        case .showFavoritesList(let list):
+            // TODO: Add view.
+            print(list)
+            break
+        case .showProductDetail(let product, let productImage):
+            // TODO: Add view.
+            print(product)
+            break
+        default:
+            break
+        }
+    }
 }
 
 // MARK: - UICollectionViewDelegates implementation.
 extension FavoritesViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 0
+        return items.count
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return items[section].cells.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -62,7 +109,7 @@ extension FavoritesViewController: UICollectionViewDelegateFlowLayout, UICollect
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize.zero
+        return items[section].headerSize
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

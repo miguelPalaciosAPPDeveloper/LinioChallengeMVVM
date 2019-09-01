@@ -31,4 +31,8 @@ enum LinioConstants {
                                            left: cellPadding,
                                            bottom: 0.0,
                                            right: cellPadding)
+    static let listCellHeaderSize = CGSize(width: screen.width, height: 13.0)
+    static let productCellHeaderSize = CGSize(width: screen.width, height: 62.0)
+
+    static let favoritesPath = "98ad43f47d40b0868d8a954385b5f83a/raw/5c00958f81f81d6ba0bb1b1469c905270e8cdfed/wishlist.json"
 }
