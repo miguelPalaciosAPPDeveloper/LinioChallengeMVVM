@@ -26,8 +26,8 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func enterAction(_ sender: UIButton) {
-        let navigationController = UINavigationController(rootViewController: FavoritesViewController.createInstance())
-        self.present(navigationController, animated: true, completion: nil)
+        let viewController = LinioChallengeDI.createFavoritesModule()
+        self.present(UINavigationController(rootViewController: viewController), animated: true, completion: nil)
     }
 
     // MARK: - Private functions.

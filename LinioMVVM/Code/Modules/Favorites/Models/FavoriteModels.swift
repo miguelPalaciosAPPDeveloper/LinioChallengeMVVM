@@ -13,10 +13,12 @@ protocol FavoritesCellProtocol {
     func setup(model: FavoritesCellViewModelProtocol)
 }
 
-protocol FavoritesCellViewModelProtocol {}
+protocol FavoritesCellViewModelProtocol {
+    var cellType: FavoriteCellType { get }
+}
 
 // MARK: - Models.
-struct FavoritesSectionModel: FavoritesCellViewModelProtocol {
+struct FavoritesSectionModel {
     let title: String?
     let headerSize: CGSize
     let cells: [FavoritesCellViewModelProtocol]

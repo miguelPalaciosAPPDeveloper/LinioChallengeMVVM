@@ -11,3 +11,4 @@
 
 // MARK: - Favorites
 "favorites_navigation_title" = "Favoritos";
+"favorites_products_header_title" = "Todos mis favoritos (%d)";

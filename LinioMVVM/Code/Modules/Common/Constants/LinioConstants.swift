@@ -24,7 +24,7 @@ enum LinioConstants {
 
     // MARK: - Favorites.
     private static let screen = UIScreen.main.bounds
-    static let cellPadding: CGFloat = screen.width * 0.024
+    static let cellPadding: CGFloat = (screen.width * 0.024) - 0.18
     static let cellHeight: CGFloat = screen.height * 0.2668
     static let cellWidth: CGFloat = screen.width * 0.464
     static let defaultInset = UIEdgeInsets(top: 0.0,

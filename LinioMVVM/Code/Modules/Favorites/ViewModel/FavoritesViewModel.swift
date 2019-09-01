@@ -66,10 +66,20 @@ extension FavoritesViewModel: FetchFavoritesUseCaseOut {
         let listCells = list.map({ FavoritesListCellViewModel(firtsProducts: [],
                                                               favoriteListModel: $0,
                                                               cellType: .favoriteList) })
-        let products = list.map({ $0.products })
-        sections.append(FavoritesSectionModel(title: nil,
+        let productsCells = list
+            .flatMap({ $0.products })
+            .map({ FavoritesProductCellViewModel(productImage: nil,
+                                                 productModel: $1,
+                                                 cellType: .favoriteProducts) })
+
+        var title: String? = nil
+        sections.append(FavoritesSectionModel(title: title,
                                               headerSize: constants.listCellHeaderSize,
                                               cells: listCells))
+        title = String(format: localizables.favoritesProductsHeaderTitle, productsCells.count)
+        sections.append(FavoritesSectionModel(title: title,
+                                              headerSize: constants.productCellHeaderSize,
+                                              cells: productsCells))
         items.value = sections
         route.value = .closeLoader
     }

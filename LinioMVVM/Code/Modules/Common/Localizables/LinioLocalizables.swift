@@ -14,4 +14,5 @@ struct LinioLocalizables {
 
     // MARK: - Favorites
     var favoritesNavigationTitle: String { return "favorites_navigation_title".localized }
+    var favoritesProductsHeaderTitle: String { return "favorites_products_header_title".localized }
 }

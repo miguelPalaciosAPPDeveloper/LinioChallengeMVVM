@@ -13,7 +13,7 @@ class LinioChallengeDI {
      Create favorites module injection.
      - Returns: FavoritesViewController.
      **/
-    func createFavoritesModule() -> FavoritesViewController {
+    class func createFavoritesModule() -> FavoritesViewController {
         let view = FavoritesViewController.createInstance()
         let serviceRouter = Router<LinioChallengeEndPoint>()
         let favoritesRepository: FavoritesRepositoryProtocol = FavoritesRepository(serviceRouter: serviceRouter)

@@ -101,11 +101,20 @@ extension FavoritesViewController: UICollectionViewDelegateFlowLayout, UICollect
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cellViewModel = items[indexPath.section].cells[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellViewModel.cellType.identifer,
+                                                      for: indexPath)
+
+        if let favoritesCell = cell as? FavoritesCellProtocol { favoritesCell.setup(model: cellViewModel) }
+
+        return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        return UICollectionReusableView()
+        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: FavoriteHeaderReusableView.identifier, for: indexPath) as? FavoriteHeaderReusableView else { return UICollectionReusableView() }
+        let sectionModel = items[indexPath.section]
+        header.setup(model: sectionModel)
+        return header
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -117,6 +126,12 @@ extension FavoritesViewController: UICollectionViewDelegateFlowLayout, UICollect
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: constants.cellWidth, height: constants.cellHeight)
+        let size = CGSize(width: constants.cellWidth, height: constants.cellHeight)
+        return size
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = items[indexPath.section].cells[indexPath.item]
+        viewModel?.didSelect(item: item)
     }
 }
