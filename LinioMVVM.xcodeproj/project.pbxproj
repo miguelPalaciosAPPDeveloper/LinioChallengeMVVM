@@ -28,6 +28,7 @@
 		9CE587D1231C4BF100C71735 /* FavoritesProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587D0231C4BF100C71735 /* FavoritesProductCellViewModel.swift */; };
 		9CE587D3231C4CCD00C71735 /* ProductImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587D2231C4CCD00C71735 /* ProductImageUseCase.swift */; };
 		9CE587D5231C4E5800C71735 /* ProductImageCacheRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587D4231C4E5800C71735 /* ProductImageCacheRepository.swift */; };
+		9CE587D7231C61A600C71735 /* FavoritesListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587D6231C61A600C71735 /* FavoritesListCellViewModel.swift */; };
 		9CED96362319F998008BF69A /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED96352319F998008BF69A /* EndPointType.swift */; };
 		9CED96382319FA9D008BF69A /* HTTPEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED96372319FA9D008BF69A /* HTTPEnums.swift */; };
 		9CED963A2319FDA5008BF69A /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED96392319FDA5008BF69A /* ParameterEncoder.swift */; };
@@ -97,6 +98,7 @@
 		9CE587D0231C4BF100C71735 /* FavoritesProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProductCellViewModel.swift; sourceTree = "<group>"; };
 		9CE587D2231C4CCD00C71735 /* ProductImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageUseCase.swift; sourceTree = "<group>"; };
 		9CE587D4231C4E5800C71735 /* ProductImageCacheRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageCacheRepository.swift; sourceTree = "<group>"; };
+		9CE587D6231C61A600C71735 /* FavoritesListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListCellViewModel.swift; sourceTree = "<group>"; };
 		9CED96352319F998008BF69A /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		9CED96372319FA9D008BF69A /* HTTPEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEnums.swift; sourceTree = "<group>"; };
 		9CED96392319FDA5008BF69A /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				9CE587BE231B663C00C71735 /* FavoritesProtocols.swift */,
 				9CE587C9231C1F5800C71735 /* FavoritesViewModel.swift */,
 				9CE587D0231C4BF100C71735 /* FavoritesProductCellViewModel.swift */,
+				9CE587D6231C61A600C71735 /* FavoritesListCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				9CE587D3231C4CCD00C71735 /* ProductImageUseCase.swift in Sources */,
 				9CE587D5231C4E5800C71735 /* ProductImageCacheRepository.swift in Sources */,
 				9CED9664231ACA00008BF69A /* LinioConstants.swift in Sources */,
+				9CE587D7231C61A600C71735 /* FavoritesListCellViewModel.swift in Sources */,
 				9CE587CD231C2C0800C71735 /* LinioChallengeDI.swift in Sources */,
 				9CE587B3231B609400C71735 /* LottieExtension.swift in Sources */,
 				9CED9647231A3751008BF69A /* ServicesErrorValidator.swift in Sources */,

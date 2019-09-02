@@ -27,10 +27,11 @@ class ProductViewCell: UICollectionViewCell {
     private var viewModel: FavoritesProductCellProtocol? { didSet { unbind(from: oldValue) } }
 
     fileprivate func setupBadges(product: LinioProduct) {
-        let isPlus48 = product.linioPlusLevel > 1
+        let isPlus = product.linioPlusLevel == 1
+        let isPlus48 = product.linioPlusLevel == 2
         let productState = ProductStateType(rawValue: product.conditionType) ?? .new
         
-        self.plusImageView.isHidden = isPlus48
+        self.plusImageView.isHidden = !isPlus
         self.plus48ImageView.isHidden = !isPlus48
         self.refurbishedImageView.isHidden = productState == .new
         self.newProductImageView.isHidden = productState == .refurbished
