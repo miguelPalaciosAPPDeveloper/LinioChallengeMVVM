@@ -9,21 +9,6 @@
 import Foundation
 import UIKit
 
-protocol FavoritesListCellProtocol: FavoritesCellViewModelProtocol {
-    var favoriteListModel: LinioFavoritesList { get }
-    var imageWithPath: Observable<ImageIndex?> { get }
-
-    /**
-     Begining the download images.
-     **/
-    func downloadImages()
-}
-
-struct ImageIndex {
-    let index: Int
-    let image: UIImage
-}
-
 class FavoritesListViewCellViewModel: FavoritesListCellProtocol {
     // MARK: - Protocols properties.
     let favoriteListModel: LinioFavoritesList

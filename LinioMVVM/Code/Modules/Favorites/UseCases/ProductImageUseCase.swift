@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+/**
+ Use case to downlaod product image and save into Cache.
+ **/
 protocol ProductImageUseCaseProtocol {
     var imageRepository: ProductImageRepositoryProtocol { get }
     var imageCacheRespository: ProductImageCacheRepositoryProtocol { get }

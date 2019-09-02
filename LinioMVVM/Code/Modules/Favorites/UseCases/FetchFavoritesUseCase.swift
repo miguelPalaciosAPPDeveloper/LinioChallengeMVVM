@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Use case to fetch favorites lists.
+ **/
 protocol FetchFavoritesUseCaseProtocol {
     var favoritesRepository: FavoritesRepositoryProtocol { get }
     var useCaseOutput: FetchFavoritesUseCaseOutput? { get set }

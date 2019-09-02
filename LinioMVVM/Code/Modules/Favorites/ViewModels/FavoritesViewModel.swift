@@ -39,7 +39,7 @@ extension FavoritesViewModel: FavoritesViewModelProtocol {
 
     func didSelect(item: FavoritesCellViewModelProtocol) {
         switch item {
-        case let viewModel as FavoritesListCellViewModel:
+        case let viewModel as FavoritesListViewCellViewModel:
             route.value = .showFavoritesList(list: viewModel.favoriteListModel)
         case let viewModel as FavoritesProductCellViewModel:
             route.value = .showProductDetail(product: viewModel.productModel,
@@ -54,14 +54,11 @@ extension FavoritesViewModel: FavoritesViewModelProtocol {
 extension FavoritesViewModel: FetchFavoritesUseCaseOutput {
     func updateFavorites(_ list: [LinioFavoritesList]) {
         var sections = [FavoritesSectionModel]()
-//        let listCells = list.map({ FavoritesListCellViewModel(firtsProducts: [],
-//                                                              favoriteListModel: $0,
-//                                                              cellType: .favoriteList) })
         let listCells = list.map({
             FavoritesListViewCellViewModel(favoriteListModel: $0,
                                            productImageUseCase: self.productImageUseCase)
         })
-        
+
         let productsCells = list
             .flatMap({ $0.products })
             .map({ FavoritesProductCellViewModel(productModel: $1,

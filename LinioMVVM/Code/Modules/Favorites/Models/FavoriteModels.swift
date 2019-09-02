@@ -24,10 +24,9 @@ struct FavoritesSectionModel {
     let cells: [FavoritesCellViewModelProtocol]
 }
 
-struct FavoritesListCellViewModel: FavoritesCellViewModelProtocol {
-    let firtsProducts: [UIImage?]
-    let favoriteListModel: LinioFavoritesList
-    let cellType: FavoriteCellType
+struct ImageIndex {
+    let index: Int
+    let image: UIImage
 }
 
 // MARK: - Enums.

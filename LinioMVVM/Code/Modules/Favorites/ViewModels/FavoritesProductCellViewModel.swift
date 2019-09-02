@@ -10,19 +10,6 @@ import Foundation
 import UIKit
 
 /**
- FavoritesProductCellProtocol
- **/
-protocol FavoritesProductCellProtocol: FavoritesCellViewModelProtocol {
-    var productImage: Observable<UIImage?> { get }
-    var productModel: LinioProduct { get }
-
-    /**
-     Request service to get product image.
-     **/
-    func downloadProductImage()
-}
-
-/**
  ViewModel for products cells.
  **/
 class FavoritesProductCellViewModel: FavoritesProductCellProtocol {
