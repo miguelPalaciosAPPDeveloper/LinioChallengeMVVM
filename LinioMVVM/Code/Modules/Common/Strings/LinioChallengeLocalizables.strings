@@ -12,3 +12,7 @@
 // MARK: - Favorites
 "favorites_navigation_title" = "Favoritos";
 "favorites_products_header_title" = "Todos mis favoritos (%d)";
+"favorites_alert_title" = "Ups, acción no disponible :(";
+"favorites_accept_button_title" = "Aceptar";
+"favorites_add_product_alert_message" = "Este feature corresponde a una acción de crear una nueva lista de favoritos, aun no esta disponible";
+"favorites_list_item_alert_message" = "Este feature corresponde a mostrar los elemento de la lista con algo de información del creador, al seleccionar un elemento de la lista lo dirigia a la pantalla de detalle del producto.";

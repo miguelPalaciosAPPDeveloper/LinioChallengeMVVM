@@ -73,20 +73,34 @@ class FavoritesViewController: UIViewController, InstantiableViewController, Ani
         switch route {
         case .addProduct:
             // TODO: Add view.
-            break
+            self.showNativeAlert(message: localizables.favoritesAddProductAlertMessage)
         case .closeLoader:
             self.stopAnimation { self.favoritesCollectionView.reloadData() }
-        case .showFavoritesList(let list):
+        case .showFavoritesList(_):
             // TODO: Add view.
-            print(list)
-            break
+            self.showNativeAlert(message: localizables.favoritesListItemAlertMessage)
         case .showProductDetail(let product, let productImage):
-            // TODO: Add view.
-            print(product)
-            break
+            let model = ProductDetailModel(product: product, productImage: productImage)
+            let viewController = LinioChallengeDI.createProductDetailModule(model: model)
+            self.present(viewController, animated: true, completion: nil)
         default:
             break
         }
+    }
+
+    /**
+     Show alert with feature message.
+     **/
+    fileprivate func showNativeAlert(message: String) {
+        let alert = UIAlertController(title: localizables.favoritesAlertTitle,
+                                      message: message,
+                                      preferredStyle: .alert)
+
+        let acceptAction = UIAlertAction(title: localizables.favoritesAcceptButtonTitle,
+                                         style: .default,
+                                         handler: nil)
+        alert.addAction(acceptAction)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

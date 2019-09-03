@@ -33,4 +33,26 @@ class LinioChallengeDI {
         view.viewModel = viewModel
         return view
     }
+
+    /**
+     Create product detail module injection.
+     - Returns: ProductDetailViewController.
+     **/
+    class func createProductDetailModule(model: ProductDetailModel) -> ProductDetailViewController {
+        // Connection.
+        let view = ProductDetailViewController.createInstance()
+        let serviceRouter = Router<LinioChallengeEndPoint>()
+
+        // Repositories.
+        let imageRepository: ProductImageRepositoryProtocol = ProductImageRepository(serviceRouter: serviceRouter)
+        let imageCacheRepository: ProductImageCacheRepositoryProtocol = ProductImageCacheRepository()
+
+        // UseCases
+        let productImageUseCase: ProductImageUseCaseProtocol = ProductImageUseCase(imageRepository: imageRepository, imageCacheRespository: imageCacheRepository)
+
+        // ViewModel
+        let viewModel: ProductDetailViewModelProtocol = ProductDetailViewModel(detailModel: model, productImageUseCase: productImageUseCase)
+        view.viewModel = viewModel
+        return view
+    }
 }
