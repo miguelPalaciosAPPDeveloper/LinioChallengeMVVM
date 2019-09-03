@@ -34,11 +34,6 @@ extension UINavigationController {
                             blue: 245.0 / 255.0, alpha: 1.0)
         self.navigationBar.tintColor = color
         self.navigationBar.topItem?.title = title
-        guard let font = UIFont(name: "Futura Medium", size: 22.0) else { return }
-        self.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.font: font,
-            NSAttributedString.Key.foregroundColor: UIColor.white
-        ]
     }
 
     /**
