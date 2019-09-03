@@ -35,6 +35,7 @@
 		9CE587E4231E0AD600C71735 /* ProductDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587E3231E0AD600C71735 /* ProductDetailProtocols.swift */; };
 		9CE587E7231E0B3C00C71735 /* ProductDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587E6231E0B3C00C71735 /* ProductDetailModels.swift */; };
 		9CE587E9231E15D700C71735 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE587E8231E15D700C71735 /* DoubleExtension.swift */; };
+		9CE587ED231E2F9B00C71735 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 9CE587EC231E2F9B00C71735 /* Cartfile */; };
 		9CED96362319F998008BF69A /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED96352319F998008BF69A /* EndPointType.swift */; };
 		9CED96382319FA9D008BF69A /* HTTPEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED96372319FA9D008BF69A /* HTTPEnums.swift */; };
 		9CED963A2319FDA5008BF69A /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED96392319FDA5008BF69A /* ParameterEncoder.swift */; };
@@ -111,6 +112,7 @@
 		9CE587E3231E0AD600C71735 /* ProductDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailProtocols.swift; sourceTree = "<group>"; };
 		9CE587E6231E0B3C00C71735 /* ProductDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModels.swift; sourceTree = "<group>"; };
 		9CE587E8231E15D700C71735 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		9CE587EC231E2F9B00C71735 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		9CED96352319F998008BF69A /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		9CED96372319FA9D008BF69A /* HTTPEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEnums.swift; sourceTree = "<group>"; };
 		9CED96392319FDA5008BF69A /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		9C7D1167231767B4005BE7A3 /* LinioMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				9CE587EB231E2F8D00C71735 /* Carthage */,
 				9CED962B2319F490008BF69A /* Code */,
 				9C7D116F231767B6005BE7A3 /* Assets.xcassets */,
 				9C7D1174231767B6005BE7A3 /* Info.plist */,
@@ -315,6 +318,14 @@
 				9CE587E6231E0B3C00C71735 /* ProductDetailModels.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9CE587EB231E2F8D00C71735 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				9CE587EC231E2F9B00C71735 /* Cartfile */,
+			);
+			name = Carthage;
 			sourceTree = "<group>";
 		};
 		9CED962B2319F490008BF69A /* Code */ = {
@@ -686,6 +697,7 @@
 				9C7D1173231767B6005BE7A3 /* LaunchScreen.storyboard in Resources */,
 				9CED968B231B49E6008BF69A /* ProductViewCell.xib in Resources */,
 				9C7D1170231767B6005BE7A3 /* Assets.xcassets in Resources */,
+				9CE587ED231E2F9B00C71735 /* Cartfile in Resources */,
 				9CED9673231AD8F6008BF69A /* Favorites.storyboard in Resources */,
 				9CED9687231B34E0008BF69A /* FavoritesListViewCell.xib in Resources */,
 				9CED968F231B4EB3008BF69A /* FavoriteHeaderReusableView.xib in Resources */,
@@ -956,7 +968,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -980,7 +992,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
